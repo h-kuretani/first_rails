@@ -1,4 +1,8 @@
 <h1>hello world!</h1>
+<% @users.each do |user| %>
+  <%=user.name %>
+  <%=user.hobby %>
+<% end %>
 <div class="row">
   <div class="col-4">
     <div class="card" style="width: 18rem;">
