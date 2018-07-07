@@ -1,1 +1,12 @@
 <h1>new world!</h1>
+
+#fはeach文と同じなんでもよい変数
+<%= form_for @user do |f| %>
+  <%= f.label "名前" %>
+  <%= f.text_field :name %>
+  <%= f.label "年齢" %>
+  <%= f.text_field :age %>
+  <%= f.label "趣味" %>
+  <%= f.text_field :hobby %>
+  <%= f.submit :class=>"btn-primary" %>
+<% end %>
