@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
 
 	def index
+		 #UserというMODELオブジェクトを作った
+		#allがつくとDBに格納されている全てのデータを引っ張ってくるという意味になる
 		@users = User.all
 	end
 
 	def new
+		#.newは
 		@user = User.new
 	end
 
