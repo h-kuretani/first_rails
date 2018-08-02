@@ -49,3 +49,6 @@ end
 gem 'bootstrap','~> 4.1.1'
 gem 'jquery-rails'
 gem 'sprockets-rails'
+
+# puts の色を変える
+gem 'colorize'

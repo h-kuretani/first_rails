@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		puts "start".red
 		# O/Rマッパー（Object Relational マッピング）
 		# オブジェクトのデータをデータベースに登録できる
 		# 裏側で勝手にSQLを発行してくれる
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
 		# if User.create(name: params[:user][:name], age: params[:user][:age], hobby: params[:user][:hobby])
 		# 	puts "保存成功"
 		# end
-		puts "保存成功" if User.create(name: params[:user][:name], age: params[:user][:age], hobby: params[:user][:hobby])
+		puts "success".green if User.create(users_params)
 	end
 
 	def update
@@ -37,6 +38,13 @@ class UsersController < ApplicationController
 
 	def destroy
 
+	end
+
+	private
+
+	def users_params
+		params.require(:user).permit(:name, :age, :hobby)
+		#=> {name: hogehoge, age: hoge, hobby: hoge}
 	end
 
 end

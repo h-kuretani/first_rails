@@ -54,6 +54,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    colorize (0.8.1)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     debug_inspector (0.0.3)
@@ -163,6 +164,7 @@ DEPENDENCIES
   bootstrap (~> 4.1.1)
   byebug
   coffee-rails (~> 4.1.0)
+  colorize
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (>= 0.3.13, < 0.5)
@@ -176,4 +178,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
