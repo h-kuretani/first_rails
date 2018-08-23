@@ -20,15 +20,15 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		puts "start"
+		puts "start".red
 		#user = User.new(name:params[:user][:name],age:params[:user][:age],hobby[:user][:hobby])
-		user = User.new(name: params[:user][:name], age: params[:user][:age], hobby: params[:user][:hobby])
-		user.save
+		# user = User.new(name: params[:user][:name], age: params[:user][:age], hobby: params[:user][:hobby])
+		# user.save
 		#if User.create(name:params[:user][:name],age:params[:user][:age],hobby[:user][:hobby])
-		if User.create(name: params[:user][:name], age: params[:user][:age], hobby: params[:user][:hobby])
-			puts "保存成功"
-		end
-		puts "success" if User.create(users_params)
+		# if User.create(name: params[:user][:name], age: params[:user][:age], hobby: params[:user][:hobby])
+		# 	puts "保存成功"
+		# end
+		puts "success".green if User.create(users_params)
 
 	end
 

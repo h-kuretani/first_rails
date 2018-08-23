@@ -6,3 +6,10 @@
 	width:800px;
 	margin : 0 auto;
 }
+
+table {
+	table-layout: fixed;
+	td {
+		width: 300px;
+	}
+}

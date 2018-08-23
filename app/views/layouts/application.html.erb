@@ -19,7 +19,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home? <span class="sr-only">(current)</span></a>
+        <%= link_to 'Home', users_path,:class => "dropdown-item"%>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link?</a>
@@ -29,7 +29,7 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to '一覧表示','/users/index',:class => "dropdown-item"%>
+          <%= link_to '一覧表示', users_path,:class => "dropdown-item"%>
           <%= link_to '新規登録','/users/new',:class => "dropdown-item"%>
           <%= link_to '登録完了','/users/create',:class => "dropdown-item"%>
           <%= link_to '詳細','/users/show',:class => "dropdown-item"%>
