@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="progress">
-  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+  <!-- 進捗バーのBootstrap -->
+	<!-- <div class="progress"> -->
+  <!-- <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div> -->
 </div>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -19,7 +20,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home? <span class="sr-only">(current)</span></a>
+        <!-- <span>は<div>みたいなもの。ただしspanはインライン要素、divはブロック要素 -->
+        <!-- ↓は、link_toに置き換えられた -->
+        <!-- <a class="nav-link" href="#">Home? <span class="sr-only">(current)</span></a> -->
+        <%= link_to 'Home', users_path,:class => "dropdown-item"%>
+
+        
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link?</a>
@@ -29,11 +35,16 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to '一覧表示','/users/index',:class => "dropdown-item"%>
-          <%= link_to '新規登録','/users/new',:class => "dropdown-item"%>
+          <!-- <%= link_to '一覧表示','/users/index',:class => "dropdown-item"%> -->
+          <%= link_to '一覧表示', users_path,:class => "dropdown-item"%>
+
+          <!-- <%= link_to '新規登録','/users/new',:class => "dropdown-item"%> -->
+          <%= link_to '新規登録',new_user_path,:class => "dropdown-item"%>
           <%= link_to '登録完了','/users/create',:class => "dropdown-item"%>
           <%= link_to '詳細','/users/show',:class => "dropdown-item"%>
           <%= link_to '編集','/users/edit',:class => "dropdown-item"%>
+          
+
           <%= link_to '更新完了','/users/update',:class => "dropdown-item"%>
           <%= link_to '削除','/users/destroy',:class => "dropdown-item"%>
           <div class="dropdown-divider"></div>
@@ -51,6 +62,8 @@
   </div>
 </nav>
 <div class ="container">
+
+  <!-- yieldに、create,index,showなどの各usersのhtmlファイルが代入される -->
 	<%= yield %>
 </div>
 

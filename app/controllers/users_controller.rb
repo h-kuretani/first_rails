@@ -3,11 +3,12 @@ class UsersController < ApplicationController
 	def index
 		 #UserというMODELオブジェクトを作った
 		#allがつくとDBに格納されている全てのデータを引っ張ってくるという意味になる
+		# Userテーブルの全てのレコードを取得
 		@users = User.all
 	end
 
 	def new
-		#.newは
+		#.newは新しいuserオブジェクトの生成
 		@user = User.new
 	end
 
