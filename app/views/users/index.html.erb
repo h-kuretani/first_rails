@@ -14,7 +14,7 @@
       <td><%=user.hobby %></td>
       <td>
         <!-- リンクを作るための　do ~ end -->
-        <%= link_to user_path(user.id), method: :patch do %>
+        <%= link_to edit_user_path(user.id), method: :get do %>
           <button type="button" class="btn btn-primary">編集</button>
         <% end %>
 

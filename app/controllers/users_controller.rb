@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 	end
 
 	def edit
-
+		@user = User.find(params[:id])
 	end
 
 	def show
@@ -33,7 +33,8 @@ class UsersController < ApplicationController
 	end
 
 	def update
-
+		user = User.find(params[:id])
+		user.update(users_params)
 	end
 
 	def destroy
